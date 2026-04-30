@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="fire_wall_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="axi_vip_pkg" />
+            <top_module name="fire_wall_tb" />
+            <top_module name="glbl" />
+            <top_module name="lib_pkg" />
+            <top_module name="std" />
+            <top_module name="xil_common_vip_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,155.780 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,591.523 ns"></ZoomEndTime>
+      <Cursor1Time time="2,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="171"></NameColumnWidth>
+      <ValueColumnWidth column_width="131"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wvobject type="group" fp_name="group19">
+      <obj_property name="label">apb</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/rst_n">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/paddr">
+         <obj_property name="ElementShortName">paddr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">paddr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/psel">
+         <obj_property name="ElementShortName">psel</obj_property>
+         <obj_property name="ObjectShortName">psel</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/penable">
+         <obj_property name="ElementShortName">penable</obj_property>
+         <obj_property name="ObjectShortName">penable</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/pwrite">
+         <obj_property name="ElementShortName">pwrite</obj_property>
+         <obj_property name="ObjectShortName">pwrite</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/pwdata">
+         <obj_property name="ElementShortName">pwdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pwdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/pprot">
+         <obj_property name="ElementShortName">pprot[2:0]</obj_property>
+         <obj_property name="ObjectShortName">pprot[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/pstrb">
+         <obj_property name="ElementShortName">pstrb[3:0]</obj_property>
+         <obj_property name="ObjectShortName">pstrb[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/prdata">
+         <obj_property name="ElementShortName">prdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">prdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/pready">
+         <obj_property name="ElementShortName">pready</obj_property>
+         <obj_property name="ObjectShortName">pready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/pslverr">
+         <obj_property name="ElementShortName">pslverr</obj_property>
+         <obj_property name="ObjectShortName">pslverr</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/reg_addr">
+         <obj_property name="ElementShortName">reg_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/reg_wr">
+         <obj_property name="ElementShortName">reg_wr</obj_property>
+         <obj_property name="ObjectShortName">reg_wr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/reg_rd">
+         <obj_property name="ElementShortName">reg_rd</obj_property>
+         <obj_property name="ObjectShortName">reg_rd</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/reg_wdata">
+         <obj_property name="ElementShortName">reg_wdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_wdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/reg_pprot">
+         <obj_property name="ElementShortName">reg_pprot[2:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_pprot[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/reg_pstrb">
+         <obj_property name="ElementShortName">reg_pstrb[3:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_pstrb[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/reg_rdata">
+         <obj_property name="ElementShortName">reg_rdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_rdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/ADDR_WIDTH">
+         <obj_property name="ElementShortName">ADDR_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/apb_inst/DATA_WIDTH">
+         <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group41">
+      <obj_property name="label">Pack</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/rst_n">
+         <obj_property name="ElementShortName">rst_n</obj_property>
+         <obj_property name="ObjectShortName">rst_n</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/reg_addr">
+         <obj_property name="ElementShortName">reg_addr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_addr[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/reg_wr">
+         <obj_property name="ElementShortName">reg_wr</obj_property>
+         <obj_property name="ObjectShortName">reg_wr</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/reg_rd">
+         <obj_property name="ElementShortName">reg_rd</obj_property>
+         <obj_property name="ObjectShortName">reg_rd</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/reg_wdata">
+         <obj_property name="ElementShortName">reg_wdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_wdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/reg_rdata">
+         <obj_property name="ElementShortName">reg_rdata[31:0]</obj_property>
+         <obj_property name="ObjectShortName">reg_rdata[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/addr">
+         <obj_property name="ElementShortName">addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/bram_data_in">
+         <obj_property name="ElementShortName">bram_data_in[195:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_data_in[195:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/bram_data_out">
+         <obj_property name="ElementShortName">bram_data_out[195:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_data_out[195:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/bram_q">
+         <obj_property name="ElementShortName">bram_q[195:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_q[195:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/bram_d">
+         <obj_property name="ElementShortName">bram_d[195:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_d[195:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/new_entry">
+         <obj_property name="ElementShortName">new_entry[48:0]</obj_property>
+         <obj_property name="ObjectShortName">new_entry[48:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/state">
+         <obj_property name="ElementShortName">state[2:0]</obj_property>
+         <obj_property name="ObjectShortName">state[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/pos">
+         <obj_property name="ElementShortName">pos[1:0]</obj_property>
+         <obj_property name="ObjectShortName">pos[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/user_id_wr_en">
+         <obj_property name="ElementShortName">user_id_wr_en</obj_property>
+         <obj_property name="ObjectShortName">user_id_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/user_ip_lo_wr_en">
+         <obj_property name="ElementShortName">user_ip_lo_wr_en</obj_property>
+         <obj_property name="ObjectShortName">user_ip_lo_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/user_ip_hi_wr_en">
+         <obj_property name="ElementShortName">user_ip_hi_wr_en</obj_property>
+         <obj_property name="ObjectShortName">user_ip_hi_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/user_id">
+         <obj_property name="ElementShortName">user_id[7:0]</obj_property>
+         <obj_property name="ObjectShortName">user_id[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/user_ip_lo">
+         <obj_property name="ElementShortName">user_ip_lo[31:0]</obj_property>
+         <obj_property name="ObjectShortName">user_ip_lo[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/user_ip_hi">
+         <obj_property name="ElementShortName">user_ip_hi[16:0]</obj_property>
+         <obj_property name="ObjectShortName">user_ip_hi[16:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/ADDR_WIDTH">
+         <obj_property name="ElementShortName">ADDR_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ADDR_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/DATA_WIDTH">
+         <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/BRAM_ADDR_WIDTH">
+         <obj_property name="ElementShortName">BRAM_ADDR_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">BRAM_ADDR_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/BRAM_DATA_WIDTH">
+         <obj_property name="ElementShortName">BRAM_DATA_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">BRAM_DATA_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/USER_ID">
+         <obj_property name="ElementShortName">USER_ID[3:0]</obj_property>
+         <obj_property name="ObjectShortName">USER_ID[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/USER_IP_LO">
+         <obj_property name="ElementShortName">USER_IP_LO[3:0]</obj_property>
+         <obj_property name="ObjectShortName">USER_IP_LO[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/USER_IP_HI">
+         <obj_property name="ElementShortName">USER_IP_HI[3:0]</obj_property>
+         <obj_property name="ObjectShortName">USER_IP_HI[3:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group154">
+      <obj_property name="label">Pack_Bram</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/addr">
+         <obj_property name="ElementShortName">addr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/cs_n">
+         <obj_property name="ElementShortName">cs_n</obj_property>
+         <obj_property name="ObjectShortName">cs_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/wr_n">
+         <obj_property name="ElementShortName">wr_n</obj_property>
+         <obj_property name="ObjectShortName">wr_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/rd_n">
+         <obj_property name="ElementShortName">rd_n</obj_property>
+         <obj_property name="ObjectShortName">rd_n</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/bram_data_in">
+         <obj_property name="ElementShortName">bram_data_in[195:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_data_in[195:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/bram_data_out">
+         <obj_property name="ElementShortName">bram_data_out[195:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_data_out[195:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/mem">
+         <obj_property name="ElementShortName">mem[255:0][195:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[255:0][195:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/BRAM_ADDR_WIDTH">
+         <obj_property name="ElementShortName">BRAM_ADDR_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">BRAM_ADDR_WIDTH[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/bram_inst/BRAM_DATA_WIDTH">
+         <obj_property name="ElementShortName">BRAM_DATA_WIDTH[31:0]</obj_property>
+         <obj_property name="ObjectShortName">BRAM_DATA_WIDTH[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
