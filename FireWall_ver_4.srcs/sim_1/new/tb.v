@@ -59,27 +59,28 @@ import design_1_axi_vip_0_0_pkg::*;
         mst_agent.start_master();
 
         wait (resetn == 1'b0);
-        repeat (100) @(posedge clk);
+        repeat (300) @(posedge clk);
+ 
 
     //USER_ID: 0x00;
 		// MAC_LO: 0x04;
 		// MAC_HI: 0x08;
 
-        // mst_agent.AXI4LITE_WRITE_BURST(8'h00, mtestProtectionType, 32'h00000001, mtestRresp);  //USER_ID
-        // mst_agent.AXI4LITE_WRITE_BURST(8'h04, mtestProtectionType, 32'hAABBCCDD, mtestRresp);  //MAC_LO
-        // mst_agent.AXI4LITE_WRITE_BURST(8'h08, mtestProtectionType, 17'h1EEFF, mtestRresp);  //MAC_HI
+        mst_agent.AXI4LITE_WRITE_BURST(8'h00, mtestProtectionType, 32'h00000001, mtestRresp);  //USER_ID
+        mst_agent.AXI4LITE_WRITE_BURST(8'h04, mtestProtectionType, 32'hFFFFFFFF, mtestRresp);  //MAC_LO
+        mst_agent.AXI4LITE_WRITE_BURST(8'h08, mtestProtectionType, 17'h1EEEE, mtestRresp);  //MAC_HI
 
-		mst_agent.AXI4LITE_WRITE_BURST(8'h00, mtestProtectionType, 32'h00000002, mtestRresp);  //USER_ID
+		mst_agent.AXI4LITE_WRITE_BURST(8'h00, mtestProtectionType, 32'h00000004, mtestRresp);  //USER_ID
+        mst_agent.AXI4LITE_WRITE_BURST(8'h04, mtestProtectionType, 32'h11223344, mtestRresp);  //MAC_LO
+        mst_agent.AXI4LITE_WRITE_BURST(8'h08, mtestProtectionType, 17'h15566, mtestRresp);  //MAC_HI
+
+		mst_agent.AXI4LITE_WRITE_BURST(8'h00, mtestProtectionType, 32'h00000003, mtestRresp);  //USER_ID
+        mst_agent.AXI4LITE_WRITE_BURST(8'h04, mtestProtectionType, 32'h99AABBCC, mtestRresp);  //MAC_LO
+        mst_agent.AXI4LITE_WRITE_BURST(8'h08, mtestProtectionType, 17'h07788, mtestRresp);  //MAC_HI
+
+		mst_agent.AXI4LITE_WRITE_BURST(8'h00, mtestProtectionType, 32'h00000005, mtestRresp);  //USER_ID
         mst_agent.AXI4LITE_WRITE_BURST(8'h04, mtestProtectionType, 32'hAABBCCDD, mtestRresp);  //MAC_LO
         mst_agent.AXI4LITE_WRITE_BURST(8'h08, mtestProtectionType, 17'h1EEFF, mtestRresp);  //MAC_HI
-
-		// mst_agent.AXI4LITE_WRITE_BURST(8'h00, mtestProtectionType, 32'h00000003, mtestRresp);  //USER_ID
-        // mst_agent.AXI4LITE_WRITE_BURST(8'h04, mtestProtectionType, 32'hAABBCCDD, mtestRresp);  //MAC_LO
-        // mst_agent.AXI4LITE_WRITE_BURST(8'h08, mtestProtectionType, 17'h1EEFF, mtestRresp);  //MAC_HI
-
-		// mst_agent.AXI4LITE_WRITE_BURST(8'h00, mtestProtectionType, 32'h00000003, mtestRresp);  //USER_ID
-        // mst_agent.AXI4LITE_WRITE_BURST(8'h04, mtestProtectionType, 32'hAABBCCDD, mtestRresp);  //MAC_LO
-        // mst_agent.AXI4LITE_WRITE_BURST(8'h08, mtestProtectionType, 17'h1EEFF, mtestRresp);  //MAC_HI
 
         mst_agent.stop_master();
     end

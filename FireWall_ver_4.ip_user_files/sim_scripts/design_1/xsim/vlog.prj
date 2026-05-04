@@ -1,11 +1,11 @@
-verilog xil_defaultlib --include "/opt/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../FireWall_ver_4.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+verilog xil_defaultlib --include "/opt/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../FireWall_ver_4.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_Fire_wall_top_0_0/sim/design_1_Fire_wall_top_0_0.v" \
 
-sv xil_defaultlib --include "/opt/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../FireWall_ver_4.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+sv xil_defaultlib --include "/opt/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../FireWall_ver_4.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_axi_vip_0_0/sim/design_1_axi_vip_0_0_pkg.sv" \
 "../../../bd/design_1/ip/design_1_axi_vip_0_0/sim/design_1_axi_vip_0_0.sv" \
 
-verilog xil_defaultlib --include "/opt/tools/Xilinx/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../FireWall_ver_4.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
+verilog xil_defaultlib --include "/opt/Vivado/2023.2/data/xilinx_vip/include" --include "../../../../FireWall_ver_4.gen/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/sim/design_1.v" \
 
 verilog xil_defaultlib "glbl.v"

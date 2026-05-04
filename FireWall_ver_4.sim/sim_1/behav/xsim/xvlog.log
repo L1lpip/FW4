@@ -1,18 +1,22 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.srcs/sources_1/new/Bram.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.srcs/sources_1/new/AddressWr_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddressWr_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.srcs/sources_1/new/Bram.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module bram
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.srcs/sources_1/new/Bram_init.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.srcs/sources_1/new/Bram_init.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Bram_init
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.srcs/sources_1/new/FireWall_Pack.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.srcs/sources_1/new/FireWall_Pack.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module FireWall_Pack
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.srcs/sources_1/new/FireWall_apb.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.srcs/sources_1/new/FireWall_apb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apb_slave
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.srcs/sources_1/new/FireWall_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.srcs/sources_1/new/FireWall_mux.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.srcs/sources_1/new/FireWall_top.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.srcs/sources_1/new/FireWall_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Fire_wall_top
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.ip_user_files/bd/design_1/ip/design_1_Fire_wall_top_0_0/sim/design_1_Fire_wall_top_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.ip_user_files/bd/design_1/ip/design_1_Fire_wall_top_0_0/sim/design_1_Fire_wall_top_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_Fire_wall_top_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/fw3/thanhntd/Fire_wall_proj/FW4/FireWall_ver_4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ducthanh/thanhntd/FireWall_ver_4/FireWall_ver_4.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fire_wall_tb
