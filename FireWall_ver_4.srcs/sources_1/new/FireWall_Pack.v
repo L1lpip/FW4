@@ -39,10 +39,10 @@ module FireWall_Pack #(
     reg [1:0]  pos;
     reg [7:0]  bram_address;
 
-    reg [195:0] bram_q;   // read data
-    reg [195:0] bram_d;   // modified data
+    reg [200:0] bram_q;   // read data
+    reg [200:0] bram_d;   // modified data
 
-    reg [47:0] new_entry;
+    reg [48:0] new_entry;
     reg [0:0] valid_bit;
     // FSM
     reg [2:0] state, next_state;
@@ -93,32 +93,26 @@ module FireWall_Pack #(
                 READ: begin
                     pos          <= user_id[1:0];
                     bram_address <= user_id >> 2;
-
                     addr  <= user_id >> 2;
                     rd_en <= 1'b1;
                     wr_en <= 1'b0;
                 end
-                //---------------------------------
                 WAIT: begin
                     rd_en  <= 1'b0;
-                    bram_q <= bram_data_out;
+                    bram_q <= bram_data_out & 200'h0;
                 end
-
-                //---------------------------------
                 WRITE: begin
                     case (pos)
-                        2'd0: bram_data_in = {bram_q[195:49], new_entry};
-                        2'd1: bram_data_in = {bram_q[195:98], new_entry, bram_q[48:0]};
-                        2'd2: bram_data_in = {bram_q[195:147], new_entry, bram_q[97:0]};
-                        2'd3: bram_data_in = {new_entry, bram_q[146:0]};
+                        2'd0: bram_data_in <= {bram_q[200:56], new_entry};
+                        2'd1: bram_data_in <= {bram_q[200:112], new_entry , bram_q[55:0]};
+                        2'd2: bram_data_in <= {bram_q[200:144], new_entry  , bram_q[111:0]};
+                        2'd3: bram_data_in <= {new_entry, bram_q[143:0]};
                     endcase
 
                     addr         <= bram_address;
                     wr_en        <= 1'b1;
                     rd_en        <= 1'b0;
                 end
-
-                //---------------------------------
                 default: begin
                     wr_en <= 0;
                     rd_en <= 0;

@@ -15,13 +15,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,155.780 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,591.523 ns"></ZoomEndTime>
-      <Cursor1Time time="2,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,895.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,430.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="171"></NameColumnWidth>
-      <ValueColumnWidth column_width="131"></ValueColumnWidth>
+      <NameColumnWidth column_width="327"></NameColumnWidth>
+      <ValueColumnWidth column_width="94"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
    <wvobject type="group" fp_name="group19">
@@ -157,16 +157,20 @@
          <obj_property name="ObjectShortName">bram_data_out[195:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/bram_q">
-         <obj_property name="ElementShortName">bram_q[195:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_q[195:0]</obj_property>
+         <obj_property name="ElementShortName">bram_q[200:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_q[200:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/bram_d">
-         <obj_property name="ElementShortName">bram_d[195:0]</obj_property>
-         <obj_property name="ObjectShortName">bram_d[195:0]</obj_property>
+         <obj_property name="ElementShortName">bram_d[200:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_d[200:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/new_entry">
          <obj_property name="ElementShortName">new_entry[48:0]</obj_property>
          <obj_property name="ObjectShortName">new_entry[48:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/bram_q">
+         <obj_property name="ElementShortName">bram_q[200:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_q[200:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/fire_wall_tb/UUT/design_1_i/Fire_wall_top_0/inst/pack_inst/state">
          <obj_property name="ElementShortName">state[2:0]</obj_property>

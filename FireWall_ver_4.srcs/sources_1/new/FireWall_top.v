@@ -84,8 +84,8 @@ module Fire_wall_top #(
     wire [7:0] w_pack_bram_address;
     wire w_pack_bram_wr_en;
     wire w_pack_bram_rd_en;
-    wire [195:0] w_pack_bram_data_in;
-    wire [195:0] w_pack_bram_data_out;
+    wire [200:0] w_pack_bram_data_in;
+    wire [200:0] w_pack_bram_data_out;
 
     FireWall_Pack #(
         .ADDR_WIDTH(ADDR_WIDTH),
@@ -105,16 +105,42 @@ module Fire_wall_top #(
         .bram_data_out(w_pack_bram_data_out)
         );
 
+	wire sel_to_apb;
+	wire [200:0] bram_init_data_in;
+	wire [200:0] mux_out;
+
+	Bram_init #(
+		.BRAM_ADDR_WIDTH(8),
+		.BRAM_DATA_WIDTH(200)
+	) bram_init_inst (
+		.clk(clk),
+		.rst_n(rst_n),
+		.bram_init_out(bram_init_data_in),
+		.bram_init_addr(w_pack_bram_address),
+		.bram_init_wr_en(w_pack_bram_wr_en),
+		.sel_to_apb(sel_to_apb)
+	);
+
+	mux #(
+		.DATA_WIDTH(200),
+		.NUM_INPUTS(2)
+	) mux_inst (
+		.in_1(bram_init_data_in),
+		.in_2(w_pack_bram_data_in),
+		.sel(sel_to_apb),
+		.out(mux_out)
+	);
+
     bram #(
         .BRAM_ADDR_WIDTH(8),
-        .BRAM_DATA_WIDTH(196)
+        .BRAM_DATA_WIDTH(200)
     ) bram_inst (
         .clk(clk),
         .addr(w_pack_bram_address),
         .cs_n(0),
         .wr_n(w_pack_bram_wr_en),
         .rd_n(w_pack_bram_rd_en),
-        .bram_data_in(w_pack_bram_data_in),
+        .bram_data_in(mux_out),
         .bram_data_out(w_pack_bram_data_out)
     );
 

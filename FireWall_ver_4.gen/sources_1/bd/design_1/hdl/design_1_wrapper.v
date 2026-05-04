@@ -2,8 +2,8 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Wed Apr 29 15:34:03 2026
-//Host        : DucThanh-Ubuntu running 64-bit Ubuntu 24.04.4 LTS
+//Date        : Mon May  4 11:54:30 2026
+//Host        : lab06 running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
