@@ -1,6 +1,6 @@
 module Bram_init#(
     parameter BRAM_ADDR_WIDTH = 8,
-    parameter BRAM_DATA_WIDTH = 200
+    parameter BRAM_DATA_WIDTH = 208
 )(
     input clk,
     input rst_n,

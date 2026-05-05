@@ -84,8 +84,8 @@ module Fire_wall_top #(
     wire [7:0] w_pack_bram_address;
     wire w_pack_bram_wr_en;
     wire w_pack_bram_rd_en;
-    wire [200:0] w_pack_bram_data_in;
-    wire [200:0] w_pack_bram_data_out;
+    wire [208:0] w_pack_bram_data_in;
+    wire [208:0] w_pack_bram_data_out;
 
     FireWall_Pack #(
         .ADDR_WIDTH(ADDR_WIDTH),
@@ -106,14 +106,14 @@ module Fire_wall_top #(
         );
 
 	wire sel_to_apb;
-	wire [200:0] bram_init_data_in;
-	wire [200:0] mux_out;
+	wire [208:0] bram_init_data_in;
+	wire [208:0] mux_out;
     wire [7:0] w_bram_init_address;
     wire w_bram_init_wr_en;
 
 	Bram_init #(
 		.BRAM_ADDR_WIDTH(8),
-		.BRAM_DATA_WIDTH(200)
+		.BRAM_DATA_WIDTH(208)
 	) bram_init_inst (
 		.clk(clk),
 		.rst_n(rst_n),
@@ -124,7 +124,7 @@ module Fire_wall_top #(
 	);
 
 	mux #(
-		.DATA_WIDTH(200),
+		.DATA_WIDTH(208),
 		.NUM_INPUTS(2)
 	) mux_inst (
 		.in_1(bram_init_data_in),
@@ -151,7 +151,7 @@ module Fire_wall_top #(
 
     bram #(
         .BRAM_ADDR_WIDTH(8),
-        .BRAM_DATA_WIDTH(200)
+        .BRAM_DATA_WIDTH(208)
     ) bram_inst (
         .clk(clk),
         .addr(w_mux_out_addr),
