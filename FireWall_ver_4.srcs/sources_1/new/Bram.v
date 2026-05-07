@@ -4,7 +4,6 @@ module bram #(
 )(
     input clk, 
     input [BRAM_ADDR_WIDTH-1:0] addr, 
-    input cs_n,
     input wr_n, 
     input rd_n,
     input [BRAM_DATA_WIDTH-1:0] bram_data_in,
@@ -14,11 +13,8 @@ module bram #(
 
     reg [BRAM_DATA_WIDTH-1:0] mem [(1<<BRAM_ADDR_WIDTH)-1:0];
 
-    always @(posedge clk)
-        if (cs_n == 1'b0) begin
-            begin
+    always @(posedge clk) begin
                 if (wr_n == 1'b1) mem[(addr)] <= bram_data_in;
                 if (rd_n == 1'b1) bram_data_out <= mem[addr];
-            end
         end
     endmodule

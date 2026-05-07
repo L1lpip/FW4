@@ -111,42 +111,42 @@ module Fire_wall_top #(
     wire [7:0] w_bram_init_address;
     wire w_bram_init_wr_en;
 
-	Bram_init #(
-		.BRAM_ADDR_WIDTH(8),
-		.BRAM_DATA_WIDTH(208)
-	) bram_init_inst (
-		.clk(clk),
-		.rst_n(rst_n),
-		.bram_init_out(bram_init_data_in),
-		.bram_init_addr(w_bram_init_address),
-		.bram_init_wr_en(w_bram_init_wr_en),
-		.sel_to_apb(sel_to_apb)
-	);
+	// Bram_init #(
+	// 	.BRAM_ADDR_WIDTH(8),
+	// 	.BRAM_DATA_WIDTH(208)
+	// ) bram_init_inst (
+	// 	.clk(clk),
+	// 	.rst_n(rst_n),
+	// 	.bram_init_out(bram_init_data_in),
+	// 	.bram_init_addr(w_bram_init_address),
+	// 	.bram_init_wr_en(w_bram_init_wr_en),
+	// 	.sel_to_apb(sel_to_apb)
+	// );
 
 	mux #(
 		.DATA_WIDTH(208),
 		.NUM_INPUTS(2)
 	) mux_inst (
-		.in_1(bram_init_data_in),
+		.in_1(0),
 		.in_2(w_pack_bram_data_in),
-		.sel(sel_to_apb),
+		.sel(1'b1),
 		.out(mux_out)
 	);
 
-    wire w_mux_wr_en;
-    wire [7:0] w_mux_out_addr;
+    // wire w_mux_wr_en;
+    // wire [7:0] w_mux_out_addr;
 
-    AddressWr_mux #(
-        .ADDR_WIDTH(8)
-    ) addr_mux_inst (
-        .sel_to_apb(sel_to_apb),
-        .bram_init_addr(w_bram_init_address),
-        .pack_to_bram_addr(w_pack_bram_address),
-        .init_wr_en(w_bram_init_wr_en),
-        .pack_wr_en(w_pack_bram_wr_en),
-        .mux_out_addr(w_mux_out_addr),
-        .mux_wr_en(w_mux_wr_en)
-    );
+    // AddressWr_mux #(
+    //     .ADDR_WIDTH(8)
+    // ) addr_mux_inst (
+    //     .sel_to_apb(sel_to_apb),
+    //     .bram_init_addr(w_bram_init_address),
+    //     .pack_to_bram_addr(w_pack_bram_address),
+    //     .init_wr_en(w_bram_init_wr_en),
+    //     .pack_wr_en(w_pack_bram_wr_en),
+    //     .mux_out_addr(w_mux_out_addr),
+    //     .mux_wr_en(w_mux_wr_en)
+    // );
 
 
     bram #(
@@ -154,9 +154,8 @@ module Fire_wall_top #(
         .BRAM_DATA_WIDTH(208)
     ) bram_inst (
         .clk(clk),
-        .addr(w_mux_out_addr),
-        .cs_n(0),
-        .wr_n(w_mux_wr_en),
+        .addr(w_pack_bram_address),
+        .wr_n(w_pack_bram_wr_en),
         .rd_n(w_pack_bram_rd_en),
         .bram_data_in(mux_out),
         .bram_data_out(w_pack_bram_data_out)

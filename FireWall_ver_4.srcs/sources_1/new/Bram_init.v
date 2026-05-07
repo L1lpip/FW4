@@ -1,18 +1,18 @@
-module Bram_init#(
+module Bram_init #(
     parameter BRAM_ADDR_WIDTH = 8,
     parameter BRAM_DATA_WIDTH = 208
-)(
+) (
     input clk,
     input rst_n,
 
     output reg [BRAM_DATA_WIDTH-1:0] bram_init_out,
     output reg [BRAM_ADDR_WIDTH-1:0] bram_init_addr,
-    output reg bram_init_wr_en,
-    output reg sel_to_apb
+    output reg                       bram_init_wr_en,
+    output reg                       sel_to_apb
 );
 
-    reg init_done;
-    reg [BRAM_ADDR_WIDTH:0] counter; 
+    reg                     init_done;
+    reg [BRAM_ADDR_WIDTH:0] counter;
 
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
@@ -26,8 +26,8 @@ module Bram_init#(
             if (!init_done) begin
                 bram_init_wr_en <= 1'b1;
                 bram_init_addr  <= counter[BRAM_ADDR_WIDTH-1:0];
-                bram_init_out   <= 0;
-                counter <= counter + 1;
+                bram_init_out   <= 208'hX;
+                counter         <= counter + 1;
 
                 if (counter == 255) begin
                     init_done <= 1'b1;

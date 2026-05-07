@@ -42,7 +42,7 @@ module FireWall_Pack #(
     reg  [BRAM_DATA_WIDTH - 1:0] bram_q;  // read data
     reg  [BRAM_DATA_WIDTH - 1:0] bram_d;  // modified data
 
-    reg  [                 48:0] new_entry;
+    reg  [                 51:0] new_entry;
 
     //flags
 
@@ -55,6 +55,7 @@ module FireWall_Pack #(
     localparam READ = 3'd1;
     localparam WAIT = 3'd2;
     localparam WRITE = 3'd3;
+	localparam DONE = 3'd4;
 
 
 
@@ -70,7 +71,8 @@ module FireWall_Pack #(
             IDLE:  if (lo_valid && hi_valid) next_state = READ;
             READ:  next_state = WAIT;
             WAIT:  next_state = WRITE;
-            WRITE: next_state = IDLE;
+            WRITE: next_state = DONE;
+            DONE:  next_state = IDLE;
         endcase
     end
 
@@ -98,7 +100,7 @@ module FireWall_Pack #(
             end
 
             if (state == IDLE && lo_valid && hi_valid) begin
-                new_entry <= {user_ip_hi, user_ip_lo};
+                new_entry <= {3'b000,user_ip_hi, user_ip_lo};
             end
 
 
@@ -114,11 +116,11 @@ module FireWall_Pack #(
                     rd_en <= 1'b0;
                 end
                 WRITE: begin
-                    bram_q <= bram_data_out;
+					bram_q <= bram_data_out;
                     case (pos)
                         2'd0: bram_data_in <= {bram_q[BRAM_DATA_WIDTH-1:52], new_entry};
                         2'd1: bram_data_in <= {bram_q[BRAM_DATA_WIDTH-1:104], new_entry, bram_q[51:0]};
-                        2'd2: bram_data_in <= {bram_q[BRAM_DATA_WIDTH-1:152], new_entry, bram_q[111:0]};
+                        2'd2: bram_data_in <= {bram_q[BRAM_DATA_WIDTH-1:156], new_entry, bram_q[103:0]};
                         2'd3: bram_data_in <= {new_entry, bram_q[BRAM_DATA_WIDTH-52-1:0]};
                     endcase
                     lo_valid <= 1'b0;
@@ -127,6 +129,15 @@ module FireWall_Pack #(
                     wr_en    <= 1'b1;
                     rd_en    <= 1'b0;
                 end
+				DONE: begin
+					case (pos)
+                        2'd0: bram_data_in <= {bram_q[BRAM_DATA_WIDTH-1:52], new_entry};
+                        2'd1: bram_data_in <= {bram_q[BRAM_DATA_WIDTH-1:104], new_entry, bram_q[51:0]};
+                        2'd2: bram_data_in <= {bram_q[BRAM_DATA_WIDTH-1:156], new_entry, bram_q[103:0]};
+                        2'd3: bram_data_in <= {new_entry, bram_q[BRAM_DATA_WIDTH-52-1:0]};
+                    endcase
+				end
+
                 default: begin
                     wr_en <= 0;
                     rd_en <= 0;
